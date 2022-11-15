@@ -1,9 +1,17 @@
+import { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import PersonButton from '../personButton'
-import './styles.css'
+import PersonButton from '../personButton';
+import './styles.css';
 
 function SalesCard() {
+
+    let min = new Date();
+    min.setFullYear(min.getFullYear()-1);
+
+    const [minDate, setMinDate] = useState(min);
+    const [maxDate, setMaxDate] = useState(new Date());
+
     return (
         <>
             <div className="dsmeta-card">
@@ -11,16 +19,16 @@ function SalesCard() {
                 <div>
                     <div className="form-container">
                         <DatePicker
-                            selected={new Date()}
-                            onChange={(date: Date) => { }}
+                            selected={minDate}
+                            onChange={(date: Date) => setMinDate(date)}
                             className="form-control"
                             dateFormat="dd/MM/yyyy"
                         />
                     </div>
                     <div className="form-container">
                         <DatePicker
-                            selected={new Date()}
-                            onChange={(date: Date) => { }}
+                            selected={maxDate}
+                            onChange={(date: Date) => setMaxDate(date)}
                             className="form-control"
                             dateFormat="dd/MM/yyyy"
                         />
@@ -79,7 +87,7 @@ function SalesCard() {
                 </div>
             </div>
         </>
-    )
+    );
 }
 
-export default SalesCard
+export default SalesCard;

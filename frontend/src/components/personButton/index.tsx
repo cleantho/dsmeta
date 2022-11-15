@@ -1,5 +1,5 @@
-import icon from '../../assets/img/person-icon.svg'
-import './styles.css'
+import icon from '../../assets/img/person-icon.svg';
+import './styles.css';
 
 function PersonButton() {
     return (
@@ -8,7 +8,7 @@ function PersonButton() {
                 <img src={icon} alt="Notificar" />
             </div>
         </>
-    )
+    );
 }
 
-export default PersonButton
+export default PersonButton;

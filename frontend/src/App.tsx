@@ -1,6 +1,6 @@
-import Header from "./components/header"
-import PersonButton from "./components/personButton"
-import SalesCard from "./components/salesCard"
+import Header from "./components/header";
+import PersonButton from "./components/personButton";
+import SalesCard from "./components/salesCard";
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
         </section>
       </main>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
