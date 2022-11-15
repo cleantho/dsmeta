@@ -1,12 +1,16 @@
+import Header from "./components/header"
 import PersonButton from "./components/personButton"
+import SalesCard from "./components/salesCard"
 
 function App() {
   return (
     <>
-      <h1>Olá mundo!</h1>
-      <PersonButton />
-      <PersonButton />
-      <PersonButton />
+      <Header />
+      <main>
+        <section id="sales">
+          <SalesCard />
+        </section>
+      </main>
     </>
   )
 }
