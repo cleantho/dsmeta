@@ -1,3 +1,5 @@
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 import PersonButton from '../personButton'
 import './styles.css'
 
@@ -8,10 +10,20 @@ function SalesCard() {
                 <h2 id="sales-title">Vendas</h2>
                 <div>
                     <div className="form-container">
-                        <input className="form-control" type="text" />
+                        <DatePicker
+                            selected={new Date()}
+                            onChange={(date: Date) => { }}
+                            className="form-control"
+                            dateFormat="dd/MM/yyyy"
+                        />
                     </div>
                     <div className="form-container">
-                        <input className="form-control" type="text" />
+                        <DatePicker
+                            selected={new Date()}
+                            onChange={(date: Date) => { }}
+                            className="form-control"
+                            dateFormat="dd/MM/yyyy"
+                        />
                     </div>
                 </div>
                 <div>
