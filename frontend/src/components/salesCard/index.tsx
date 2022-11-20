@@ -72,7 +72,7 @@ function SalesCard() {
                                             <td className="show990">{sale.visited}</td>
                                             <td className="show990">{sale.deals}</td>
                                             <td>{sale.amount.toFixed(2)}</td>
-                                            <td className="td-img">           <PersonButton />
+                                            <td className="td-img">           <PersonButton saleId={sale.id}/>
                                             </td>
                                         </tr>
                                     )
