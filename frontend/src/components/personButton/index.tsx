@@ -1,4 +1,6 @@
 import axios from "axios";
+import { toast } from "react-toastify";
+import { useEffect, useState } from "react";
 import icon from '../../assets/img/person-icon.svg';
 import { BASE_URL } from '../../utils/request';
 import './styles.css';
@@ -8,8 +10,12 @@ type Props = {
 }
 
 function handleClick(id: number) {
+
     axios(`${BASE_URL}/sales/${id}/notify`)
-        .then(response => { console.log("Enviado!") });
+        .then(response => {
+            toast.info("Mensagem enviada com sucesso: \"" + response.data + "\"");
+        });
+
 }
 
 function PersonButton({ saleId }: Props) {
